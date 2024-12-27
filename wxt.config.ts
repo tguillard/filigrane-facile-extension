@@ -8,7 +8,7 @@ export default defineConfig({
         action: {},
         name: '__MSG_extName__',
         description: '__MSG_extDescription__',
-        default_locale: "en"
+        default_locale: "en",
     },
     vite: () => ({
         plugins: [react()],

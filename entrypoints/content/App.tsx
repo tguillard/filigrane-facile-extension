@@ -9,6 +9,7 @@ import ExtMessage, {MessageType} from "@/entrypoints/types.ts";
 import Header from "@/entrypoints/content/header.tsx";
 import {useTranslation} from "react-i18next";
 import {useTheme} from "@/components/theme-provider.tsx";
+import { Button } from '@/components/ui/button';
 
 export default () => {
     const [showContent, setShowContent] = useState(true);
@@ -60,6 +61,11 @@ export default () => {
             }
         });
 
+        // setTimeout(() => {
+        //     console.log('Après 2 secondes');
+        //     setShowContent(false);
+        //   }, 5000);
+
         initI18n();
 
     }, []);
@@ -68,7 +74,30 @@ export default () => {
     return (
         <div className={theme}>
             {showContent && <div
-                className="fixed top-0 right-0 h-screen w-[400px] bg-background z-[1000000000000] rounded-l-xl shadow-2xl">
+                className="fixed top-[100px] left-[50px] h-[400px] w-[400px] bg-background z-[1000000000000] rounded shadow-2xl">
+                
+                <Button
+                    variant="ghost"
+                    size="sm"
+                    className="absolute top-2 right-2 rounded-full p-2 hover:bg-muted"
+                    onClick={() => setShowContent(false)}
+                >
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="h-4 w-4"
+                    >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M6 18L18 6M6 6l12 12"
+                    />
+                    </svg>
+                </Button>
+                
                 <Header headTitle={headTitle}/>
                 <Sidebar closeContent={() => {
                     setShowContent(false)

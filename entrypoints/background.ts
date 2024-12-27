@@ -5,7 +5,7 @@ export default defineBackground(() => {
     console.log('Hello background!', {id: browser.runtime.id});// background.js
 
     // @ts-ignore
-    browser.sidePanel.setPanelBehavior({openPanelOnActionClick: true}).catch((error: any) => console.error(error));
+    // browser.sidePanel.setPanelBehavior({openPanelOnActionClick: true}).catch((error: any) => console.error(error));
 
     //monitor the event from extension icon click
     browser.action.onClicked.addListener((tab) => {

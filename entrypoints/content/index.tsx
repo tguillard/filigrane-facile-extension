@@ -9,6 +9,10 @@ export default defineContentScript({
     matches: ['*://*/*'],
     cssInjectionMode: 'ui',
     async main(ctx) {
+        if (!window.location.hostname.includes('api.filigrane.beta.gouv.fr')) {
+            console.log("Script non activé : Domaine non autorisé.");
+            return; // Arrête l'exécution si le domaine n'est pas contoso.com
+        }
         initTranslations(i18nConfig.defaultLocale, ["common", "content"])
         const ui = await createShadowRootUi(ctx, {
             name: 'language-learning-content-box',

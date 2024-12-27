@@ -7,20 +7,12 @@ export function Home() {
     const {t} = useTranslation();
     const references = [
         {
-            name: "Wxt",
-            url: "https://wxt.dev/"
+            name: "Dossier Facile",
+            url: "https://www.dossierfacile.logement.gouv.fr/"
         },
         {
-            name: "React",
-            url: "https://react.dev/"
-        },
-        {
-            name: "Tailwind css",
-            url: "https://tailwindcss.com/"
-        },
-        {
-            name: "Shadcn UI",
-            url: "https://ui.shadcn.com/"
+            name: "Filigrane Facile",
+            url: "https://filigrane.beta.gouv.fr/"
         }
     ]
     return (

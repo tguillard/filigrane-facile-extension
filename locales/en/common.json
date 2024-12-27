@@ -1,9 +1,9 @@
 {
-  "home": "Home",
+  "home": "Comment utiliser ?",
   "settings": "Settings",
   "themeSettings": "Theme Settings",
   "i18nSettings": "Interface Language",
-  "introduce": "Introduce",
-  "description": "This is a boilerplate and starter for chrome browser extension, built with Wxt、 React、 Tailwind css 、Shadcn ui and Typescript.\nSupport dark mode and localization ",
-  "reference": "Reference"
+  "introduce": "Télécharger le PDF généré",
+  "description": "Téléchargez le PDF via le bouton en haut à droite de la page. Vous pouvez maintenant l'utiliser sur le site web de votre choix.",
+  "reference": "Réferences"
 }
